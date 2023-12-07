@@ -3,11 +3,12 @@ import { Container } from './styles';
 
 interface ButtonProps {
     children: React.ReactNode
+    onPress?: () => void
 }
 
-export default function Button({children}: ButtonProps) {
+export default function Button({children, onPress}: ButtonProps) {
   return (
-      <Container>
+      <Container onPress={onPress}>
           {children}
       </Container>
    );
