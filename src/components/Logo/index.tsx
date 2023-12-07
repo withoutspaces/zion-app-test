@@ -10,10 +10,12 @@ interface LogoProps {
 }
 
 export default function Logo({size}: LogoProps) {
+  const logoSize = size === "large" ? 40 : 25
+  const nameLogoSize = size === "large" ? 100 : 85
   return (
     <Container>
-      <Image source={logo}/>
-      <Image source={nameLogo} />
+      <Image source={logo} style={{width: logoSize, resizeMode: "contain"}}/>
+      <Image source={nameLogo} style={{width: nameLogoSize, resizeMode: "contain"}}/>
     </Container>
   );
 }

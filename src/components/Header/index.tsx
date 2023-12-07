@@ -7,7 +7,7 @@ import Logo from "../Logo";
 export default function Header() {
   return (
     <Container>
-      <Logo />
+      <Logo size="large"/>
       <BackgroundImage source={background} />
       <Border />
     </Container>

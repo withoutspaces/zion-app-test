@@ -8,13 +8,14 @@ interface TextFieldProps {
     placeholder: string
 }
 
-export default function TextField({label, placeholder}: TextFieldProps) {
+export default function TextField({label, placeholder, ...rest}: TextFieldProps) {
   return (
       <Container>
           <Label>{label}</Label>  
           <TextInput 
             placeholder={placeholder}
             placeholderTextColor={themes.colors.textSecondary}
+            {...rest}
           />
       </Container>
    );
